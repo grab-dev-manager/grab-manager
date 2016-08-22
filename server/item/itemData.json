@@ -1,0 +1,89 @@
+name 
+seller_id 
+type 
+estimated_price 
+currency_code 
+sort_order
+description
+status
+sold
+
+icon_href  
+photo_href
+
+Kodok Tumis Sayur Dengan Saus Mala
+IDGFSTI00000023
+A La Carte Menu
+98000
+RP
+sort_order null
+Spicy
+status null
+sold null
+
+icon_href null
+photo_href null
+
+"currency_code": "RP",
+"description": "Spicy",
+"fulltext_name": "Kodok Tumis Sayur Dengan Saus Mala",
+"name": "Kodok Tumis Sayur Dengan Saus Mala",
+"price": "98000",
+"sellerid": "IDGFSTI00000023",
+"sortorder": 50,
+"type": "A La Carte Menu"
+
+
+
+currency_code
+description
+fulltext_name
+name
+price
+sellerid
+sortorder
+type
+currency_code
+description
+fulltext_name
+name
+price
+sellerid
+sortorder
+type
+
+RP,
+Spicy,
+Kodok Tumis Sayur Dengan Saus Mala,
+Kodok Tumis Sayur Dengan Saus Mala,
+98000,
+IDGFSTI00000023,
+50,
+A La Carte Menu
+RP,
+xx,
+Sup Pi Oh Dengan Jamur,
+Sup Pi Oh Dengan Jamur,
+238000,
+IDGFSTI00000023,
+57,
+A La Carte Menu
+
+
+"currency_code": "RP",
+"description": "Spicy",
+"fulltext_name": "Kodok Tumis Sayur Dengan Saus Mala",
+"name": "Kodok Tumis Sayur Dengan Saus Mala",
+"price": "98000",
+"sellerid": "IDGFSTI00000023",
+"sortorder": 50,
+"type": "A La Carte Menu"
+
+"currency_code": "RP",
+"description": "",
+"fulltext_name": "Sup Pi Oh Dengan Jamur",
+"name": "Sup Pi Oh Dengan Jamur",
+"price": "238000",
+"sellerid": "IDGFSTI00000023",
+"sortorder": 57,
+"type": "A La Carte Menu"

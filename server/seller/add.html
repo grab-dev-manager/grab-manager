@@ -1,0 +1,237 @@
+<!--引入CSS-->
+<h2 class="contentTitle">edit seller</h2>
+<div class="pageContent">
+	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+		<div class="pageFormContent" layoutH="96">
+			<p>
+				<label>referenceid :</label>
+				<input name="referenceid"  type="text" size="30"  readonly="true" />
+			</p>
+			<p>
+				<label>name :</label>
+				<input name="name" type="text" size="30"   class="required"/>
+			</p>
+			<p>
+				<label>business_type :</label>
+				<input name="business_type" type="text" size="30"   class="required"/>
+			</p>
+			<div class="unit">
+				<p>
+					<label>country :</label>
+					<input name="country"  type="text" size="30" />
+				</p>
+				<p>
+					<label>timezone :</label>
+					<input name="timezone" type="text" size="30" />
+				</p>
+				<p>
+					<label>state :</label>
+					<input name="state"  type="text" size="30" />
+				</p>
+				<p>
+					<label>city :</label>
+					<input name="city"  type="text" size="30" />
+				</p>
+				<p>
+					<label>district :</label>
+					<input name="district"  type="text" size="30" />
+				</p>
+				<p>
+					<label>street :</label>
+					<input name="street"  type="text" size="30" />
+				</p>
+				<p>
+					<label>house :</label>
+					<input name="house"  type="text" size="30" />
+				</p>
+				<p>
+					<label>postcode :</label>
+					<input name="postcode" type="text" size="30" />
+				</p>
+				<p>
+					<label>geo_location :</label>
+					<input name="geo_location"  type="text" size="30" />
+				</p>
+
+			</div>
+			<p>
+				<label>phone_number :</label>
+				<input name="phone_number"  type="text" size="30" />
+			</p>
+			<div class="unit">
+				<label>description :</label>
+				<textarea  name="description" rows="6" cols="104"></textarea>
+			</div>
+			<p>
+				<label>tags :</label>
+				<input name="tags" type="text" size="30" />
+			</p>
+			<p>
+				<label>partner_level :</label>
+				<input name="partner_level" type="text" size="30" />
+			</p>
+			<p>
+				<label>cuisine :</label>
+				<input name="cuisine" type="text"  size="30" />
+			</p>
+			<p>
+				<label>halal :</label>
+				<input name="halal"  type="text" size="30" />
+			</p>
+			<p>
+				<label style="width:140px;">estimated_delivery_time :</label>
+				<input name="estimated_delivery_time"  type="text" size="30" />
+			</p>
+			<p>
+				<label>tax :</label>
+				<input name="tax"  type="text" size="30" />
+			</p>
+			<p>
+				<label>commission :</label>
+				<input name="commission" type="text" size="30" />
+			</p>
+			<p>
+				<label>status :</label>
+				<input name="status" type="text" size="30" />
+			</p>
+			<p>
+				<label>active :</label>
+				<input name="active" type="text" size="30" />
+			</p>
+			<div class="unit">
+				<div class="left service_hours">
+					<div>service_hours :</div>
+					<ul class="day-time-select">
+						<li  class="clearfix">
+							<label>Monday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li  class="clearfix">
+							<label>Tuesday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li  class="clearfix">
+							<label>Wednesday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li  class="clearfix">
+							<label>Thursday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li  class="clearfix">
+							<label>Friday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li class="clearfix">
+							<label>Saturday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+						<li  class="clearfix">
+							<label>Sunday :</label>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							<span>-</span>
+							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+						</li>
+					</ul>
+				</div>
+				<div class="right opening_hours">
+					<div>opening_hours :</div>
+						<ul class="day-time-select">
+							<li  class="clearfix">
+								<label>Monday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li  class="clearfix">
+								<label>Tuesday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li  class="clearfix">
+								<label>Wednesday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li  class="clearfix">
+								<label>Thursday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li  class="clearfix">
+								<label>Friday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li class="clearfix">
+								<label>Saturday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+							<li  class="clearfix">
+								<label>Sunday :</label>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<span>-</span>
+								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+							</li>
+						</ul>
+					</div>
+			</div>
+			<div class="unit">
+				<label>homepage_href :</label>
+				<!--dom结构部分-->
+				<div class="upload-img-one">
+					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
+                    <div class="img-picker img-one">select </div>
+                    <div class="img-show wh150" data-input-name="homepage_href"></div>
+                </div>
+			</div>
+			<div class="unit">
+				<label>icon :</label>
+				<!--dom结构部分-->
+				<div class="upload-img-one">
+					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
+                    <div class="img-picker img-one">select </div>
+                    <div class="img-show wh150" data-input-name="icon_href"></div>
+                </div>
+			</div>
+			<div class="unit">
+				<label>photo :</label>
+				<!--dom结构部分-->
+				<div class="upload-img-one">
+					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
+                    <div class="img-picker img-more">select </div>
+                    <div class="img-show wh150" data-input-name="photo_href"></div>
+                </div>
+			</div>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<!--引入JS-->
+<script type="text/javascript" src="./dwz/js/grab.selectTime.js"></script>
+<script type="text/javascript" src="./dwz/js/imgUploadClass.js"></script>

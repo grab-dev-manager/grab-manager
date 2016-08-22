@@ -1,0 +1,73 @@
+<!--引入CSS-->
+<h2 class="contentTitle">edit item</h2>
+<div class="pageContent">
+	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+		<div class="pageFormContent" layoutH="96">
+			<p>
+				<label>name :</label>
+				<input name="currency_code" type="text" value="Kodok Tumis Sayur Dengan Saus Mala" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>seller_id :</label>
+				<input name="currency_code" type="text" value="IDGFSTI00000023" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>type :</label>
+				<input name="currency_code" type="text" value="A La Carte Menu" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>estimated_price :</label>
+				<input name="currency_code" type="text" value="98000" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>currency_code :</label>
+				<input name="currency_code" type="text" value="RP" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>sort_order :</label>
+				<input name="currency_code" type="text" value="sort_order null" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>description :</label>
+				<input name="currency_code" type="text" value="Spicy" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>status :</label>
+				<input name="currency_code" type="text" value="status null" size="30"  class="required"/>
+			</p>
+			<p>
+				<label>sold :</label>
+				<input name="currency_code" type="text" value="sold null" size="30"  class="required"/>
+			</p>
+			<div class="unit">
+				<label>icon :</label>
+				<!--dom结构部分-->
+				<div class="upload-img-one">
+					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
+                    <div class="img-picker img-one">select </div>
+                    <div class="img-show wh150" data-input-name="icon_href"></div>
+                </div>
+			</div>
+			<div class="unit">
+				<label>photo :</label>
+				<!--dom结构部分-->
+				<div class="upload-img-one">
+					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
+                    <div class="img-picker img-more">select </div>
+                    <div class="img-show wh150" data-input-name="photo_href"></div>
+                </div>
+			</div>
+			
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>
+<!--引入JS-->
+<script type="text/javascript" src="./dwz/js/imgUploadClass.js"></script>

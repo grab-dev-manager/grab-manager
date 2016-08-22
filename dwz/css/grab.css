@@ -1,0 +1,26 @@
+.pageFormContent p{
+	min-width: 500px;
+}
+span.error{
+	/*display: inline-block;*/
+	/*width:auto;*/
+}
+.day-time-select span{
+	float: left;
+	padding: 0 5px;
+}
+.day-time-select label{
+	width:80px;
+	margin-left: 30px;
+}
+.service_hours{
+	float: left;
+	width:500px;
+}
+.opening_hours{
+	float: left;
+}
+.time-selected{
+	background: #019875 !important;
+	color:#ffffff !important;
+}

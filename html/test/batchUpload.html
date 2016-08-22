@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="./dwz/webuploader-0.1.5/webuploader.css">
+<link rel="stylesheet" type="text/css" href="./dwz/css/batchUpload.css">
+
+<script type="text/javascript" src="./dwz/webuploader-0.1.5/webuploader.js"></script>
+<script>
+    var BASE_URL = '';
+    var SERVER_URL = './server/fileupload.php';
+</script>
+<div id="uploader" class="wu-example">
+    <div class="queueList">
+        <div id="dndArea" class="placeholder">
+            <div id="filePicker"></div>
+            <p>or drag picture here, limit 300</p>
+        </div>
+    </div>
+    <div class="statusBar" style="display:none;">
+        <div class="progress">
+            <span class="text">0%</span>
+            <span class="percentage"></span>
+        </div><div class="info"></div>
+        <div class="btns">
+            <div id="filePicker2"></div><div class="uploadBtn">startUpload</div>
+        </div>
+    </div>
+</div>
+<script src="./dwz/js/batchUpload.js"></script>

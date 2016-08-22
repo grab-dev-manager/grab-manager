@@ -1,0 +1,116 @@
+city
+cityid
+commission
+country
+countryid
+cuisine
+description
+district
+estimated_delivery_time
+geo_location
+halal
+house
+icon_href
+name
+opening_hours
+phone_number
+photo_href
+postcode
+referenceid
+service_hours
+street
+tags
+tax
+timezone
+updated_time
+
+
+<td>"Jakarta"</td>
+<td>"10"</td>
+<td>"0"</td>
+<td>"Indonesia"</td>
+<td>"6"</td>
+<td>"Indonesian"</td>
+<td>""</td>
+<td>"Jakarta Barat"</td>
+<td>60</td>
+<td>"-6.173576,106.7758442"</td>
+<td>false</td>
+<td>"Green Ville Paradise"</td>
+<td>""</td>
+<td>"Ta Thao - Green Ville"</td>
+<td>{}</td>
+<td>"+62215670511"</td>
+<td>""</td>
+<td>""</td>
+<td>"IDGFSTI0000002a"</td>
+<td>{}</td>
+<td>"Jl. Mangga Raya No. 8C - D"</td>
+<td>""</td>
+<td>"0.1"</td>
+<td>"Asia/Jakarta"</td>
+<td>""</td>
+
+
+{
+"city": "Jakarta",
+"cityid": "10",
+"commission": "0",
+"country": "Indonesia",
+"countryid": "6",
+"cuisine": "Indonesian",
+"description": "",
+"district": "Jakarta Barat",
+"estimated_delivery_time": 60,
+"geo_location": "-6.173576,106.7758442",
+"halal": false,
+"house": "Green Ville Paradise",
+"icon_href": "",
+"name": "Ta Thao - Green Ville",
+"opening_hours": {
+"fri": "09:30-21:00",
+"mon": "09:30-21:00",
+"sat": "09:30-21:00",
+"sun": "09:30-21:00",
+"thu": "09:30-21:00",
+"tue": "09:30-21:00",
+"wed": "09:30-21:00"
+},
+"phone_number": "+62215670511",
+"photo_href": "",
+"postcode": "",
+"referenceid": "IDGFSTI0000002a",
+"service_hours": {
+"fri": "10:30-20:30",
+"mon": "10:30-20:30",
+"sat": "10:30-20:30",
+"sun": "10:30-20:30",
+"thu": "10:30-20:30",
+"tue": "10:30-20:30",
+"wed": "10:30-20:30"
+},
+"street": "Jl. Mangga Raya No. 8C - D",
+"tags": "",
+"tax": "0.1",
+"timezone": "Asia/Jakarta",
+"updated_time": [
+2016,
+8,
+11,
+18,
+4,
+20,
+3,
+224,
+0
+]
+},
+
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday

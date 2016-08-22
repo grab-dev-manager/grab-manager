@@ -1,0 +1,1416 @@
+<!-- common form for search and pagination -->
+<form id="pagerForm" method="post" action="grab_mgr_res.html">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
+</form>
+
+
+<div class="pageHeader">
+	<form onsubmit="return navTabSearch(this);" action="grab_mgr_res.html" method="post">
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					Search <input type="text" name="keyword" />
+				</td>
+				<td><button type="submit">submit</button></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="./test/html/formTempEdit.html" target="navTab"><span>add</span></a></li>
+			<li><a class="delete" target="selectedTodo" rel="ids" href="./dwz/demo/common/ajaxDone.html?uid={sid_user}" title="delete"><span>delete</span></a></li>
+			<li><a class="edit" href="./html/test/formTemp.html?uid={sid_user}" target="navTab"><span>modify</span></a></li>
+			<li><a class="add" href="./html/test/batchUpload.html" target="navTab"><span>batchUpload</span></a></li>
+			<li class="line">line</li>
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="111">
+		<thead>
+			<tr>
+				<th width="20"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
+				<th width="100">Company Name</th>
+				<th width="140">Customer ID</th>
+				<th>Customer Name</th>
+				<th width="100">Customer Type</th>
+				<th width="150">Card ID</th>
+				<th width="80" align="center">Credit Level</th>
+				<th width="80">Industry</th>
+				<th width="80">Create Date</th>
+				<th>operate</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="1">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="2">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="3">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="4">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="5">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="6">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="7">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="8">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="9">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+			<tr target="sid_user" rel="10">
+				<td><input name="ids" value="xxx" type="checkbox"></td>
+				<td>天津农信社</td>
+				<td>A120113196309052434</td>
+				<td>天津市华建装饰工程有限公司</td>
+				<td>联社营业部</td>
+				<td>29385739203816293</td>
+				<td>5级</td>
+				<td>政府机构</td>
+				<td>2009-05-21</td>
+				<td>
+					<a title="delete" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
+					<a title="edit" target="navTab" href="formTemp.html?id=xxx" class="btnEdit">edit</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>show</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+				<option value="200">200</option>
+			</select>
+			<span>records，total ${totalCount} records</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
+	</div>
+</div>

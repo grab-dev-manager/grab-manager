@@ -1,0 +1,22 @@
+catalog_content
+catalog_name
+catalog_status
+seller_id
+updated_time
+
+
+"catalog_content": {
+	"content_items": ["AVZ5D0sxZg1qjozSm7pQ","AVZ5D0sxZg1qjozSm7pN"],
+	"sub_catalogs": ["AVaYOzOuK_Nl114y2LTC"]
+},
+"catalog_name": "cataloghome1",
+"catalog_status": "1",
+"seller_id": "IDGFSTI0000002a",
+"updated_time": [2016,8,11,18,4,20,3,224,0]
+
+
+xxxxx
+cataloghome1
+1
+IDGFSTI0000002a
+2016,8,11,18,4,20,3,224,0

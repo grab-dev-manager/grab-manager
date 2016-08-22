@@ -1,0 +1,98 @@
+diff --git a/grab-live-manager/grab/server/seller/list.html b/grab-live-manager/grab/server/seller/list.html
+index f27c35d..2faca85 100644
+--- a/grab-live-manager/grab/server/seller/list.html
++++ b/grab-live-manager/grab/server/seller/list.html
+@@ -1,20 +1,20 @@
+ <!-- common form for search and pagination -->
+-<form id="pagerForm" method="post" action="./server/seller/list.html">
+-	<input type="hidden" name="status" value="1">
+-	<input type="hidden" name="keywords" value="{{.keyword}}" />
+-	<input type="hidden" name="pageNum" value="{{.pageNum}}" />
+-	<input type="hidden" name="numPerPage" value= {{.numPerPage}} />
+-	<input type="hidden" name="orderField" value="1" />
++<form id="pagerForm" method="post" action="./server/seller/list.php">
++	<input type="hidden" name="status" value="${param.status}">
++	<input type="hidden" name="keywords" value="${param.keywords}" />
++	<input type="hidden" name="pageNum" value="1" />
++	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
++	<input type="hidden" name="orderField" value="${param.orderField}" />
+ </form>
+ 
+ 
+ <div class="pageHeader">
+-	<form onsubmit="return navTabSearch(this);" action="./server/seller/list.html" method="post">
++	<form onsubmit="return navTabSearch(this);" action="./server/seller/list.php" method="post">
+ 	<div class="searchBar">
+ 		<table class="searchContent">
+ 			<tr>
+ 				<td>
+-					Search <input type="text" name="keyword" />
++					Search <input type="text" name="keyword" value="hhh" />
+ 				</td>
+ 				<td><button type="submit">submit</button></td>
+ 			</tr>
+@@ -25,9 +25,9 @@
+ <div class="pageContent">
+ 	<div class="panelBar">
+ 		<ul class="toolBar">
+-			<li><a class="add" href="./server/seller/add.html" target="navTab"><span>add</span></a></li>
++			<li><a class="add" href="./server/seller/add.html" target="navTab" title="seller add"><span>add</span></a></li>
+ 			<li><a class="delete" target="selectedTodo" rel="ids" href="demo/common/ajaxDone.html?uid={sid_user}" title="delete"><span>delete</span></a></li>
+-			<li><a class="edit" href="./server/seller/edit.html?uid={sid_user}" target="navTab"><span>modify</span></a></li>
++			<li><a class="edit" href="./server/seller/edit.html?uid={sid_user}" target="navTab" title="seller edit"><span>edit</span></a></li>
+ 			<li class="line">line</li>
+ 		</ul>
+ 	</div>
+@@ -46,25 +46,23 @@
+ 			</tr>
+ 		</thead>
+ 		<tbody>
+-			{{with .data}}
+-			{{range .}}
++
++			<!-- data list  -->
+ 			<tr target="sid_user" rel="1">
+ 				<td><input name="ids" value="xxx" type="checkbox"></td>
+ 				<!--字段对应区域开始-->
+-					<td>{{.referenceid}}</td>
+-					<td>{{.name}}</td>
+-					<td>{{.business_type}}</td>
+-					<td>{{.city}}</td>
+-					<td>{{.phone_number}}</td>
++					<td>IDGFSTI0000002a</td>
++					<td>Ta Thao - Green Ville</td>
++					<td>empty</td>
++					<td>Jakarta</td>
++					<td>+62215670511</td>
+ 				<!--字段对应区域结束-->
+ 
+ 				<td>
+-					<a title="delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id={{.referenceid}}" class="btnDel">delete</a>
+-					<a title="edit" target="navTab" href="./server/seller/edit.html?id={{.referenceid}}" class="btnEdit">edit</a>
++					<a title="seller delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
++					<a title="seller edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
+ 				</td>
+ 			</tr>
+-			{{end}}
+-			{{end}}
+ 			<!-- data list -->
+ 
+ 
+@@ -77,12 +75,12 @@
+ 			<span>show</span>
+ 			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+ 				<option value="20">20</option>
+-				<option value="50">50</option>
++				<option value="50" selected="selected">50</option>
+ 				<option value="100">100</option>
+ 				<option value="200">200</option>
+ 			</select>
+-			<span>records，total 3019 records</span>
++			<span>records，total ${totalCount} records</span>
+ 		</div>
+-		<div class="pagination" targetType="navTab" totalCount="3019" numPerPage="{{.numPerPage}}" pageNumShown="10" currentPage="{{.pageNum}}"></div>
++		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="50" currentPage="1"></div>
+ 	</div>
+-</div>
++</div>
+\ No newline at end of file
