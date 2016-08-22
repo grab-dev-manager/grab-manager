@@ -9,7 +9,6 @@ $(function() {
 })
  */
 ;(function($){
-	
 	var $timePanel = null
 		,$hourTDs = null
 		,$minuteTDs = null
@@ -317,7 +316,7 @@ $(function() {
  	
 })(jQuery);
 
-$(function() {
-	$('table .timepick').timepick();
-	$('.timepick').timepick({format : 'hh:mm'});
-})
+function initSellerTimePick(con_box_id){
+	   $(con_box_id).find('table .timepick').timepick();
+	   $(con_box_id).find('.timepick').timepick({format : 'hh:mm'});
+}

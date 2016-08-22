@@ -1,20 +1,20 @@
 <!-- common form for search and pagination -->
-<form id="pagerForm" method="post" action="./server/catalog/list.html">
-	<input type="hidden" name="status" value="1">
-	<input type="hidden" name="keywords" value="{{.keyword}}" />
-	<input type="hidden" name="pageNum" value="{{.pageNum}}" />
-	<input type="hidden" name="numPerPage" value= {{.numPerPage}} />
-	<input type="hidden" name="orderField" value="1" />
+<form id="pagerForm" method="post" action="./server/catalog/list.php">
+	<input type="hidden" name="status" value="${param.status}">
+	<input type="hidden" name="keywords" value="${param.keywords}" />
+	<input type="hidden" name="pageNum" value="1" />
+	<input type="hidden" name="numPerPage" value="${model.numPerPage}" />
+	<input type="hidden" name="orderField" value="${param.orderField}" />
 </form>
 
 
 <div class="pageHeader">
-	<form onsubmit="return navTabSearch(this);" action="./server/catalog/list.html" method="post">
+	<form onsubmit="return navTabSearch(this);" action="./server/catalog/list.php" method="post">
 	<div class="searchBar">
 		<table class="searchContent">
 			<tr>
 				<td>
-					Search <input type="text" name="keyword" value="{{.keyword}}"/>
+					Search <input type="text" name="keyword" />
 				</td>
 				<td><button type="submit">submit</button></td>
 			</tr>
@@ -36,8 +36,8 @@
 			<tr>
 				<th width="20"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
 				<!--字段对应区域开始-->
-				<th>name</th>
-				<th>status</th>
+				<th>catalog_name</th>
+				<th>catalog_status</th>
 				<th>seller_id</th>
 				<th>updated_time</th>
 				<!--字段对应区域结束-->
@@ -46,25 +46,21 @@
 		</thead>
 		<tbody>
 			<!-- data list  -->
-			{{with .data}}
-			{{range .}}
 			<tr target="sid_user" rel="2">
 				<td><input name="ids" value="xxx" type="checkbox"></td>
 
 				<!--字段对应区域开始-->
-				<td>{{.catalog_name}}</td>
-				<td>{{.catalog_status}}</td>
-				<td>{{.seller_id}}</td>
-				<td>{{.updated_time}}</td>
+				<td>cataloghome1</td>
+				<td>1</td>
+				<td>IDGFSTI0000002a</td>
+				<td>2016,8,11,18,4,20,3,224,0</td>
 				<!--字段对应区域结束-->
 
 				<td>
 					<a title="catalog delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-					<a title="catalog edit" target="navTab" href="./server/catalog/edit.html?id={{.id}}" class="btnEdit">edit</a>
+					<a title="catalog edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
 				</td>
 			</tr>
-			{{end}}
-			{{end}}
 			<!-- data list -->
 		</tbody>
 	</table>
@@ -77,8 +73,8 @@
 				<option value="100">100</option>
 				<option value="200">200</option>
 			</select>
-			<span>records，total 100 records</span>
+			<span>records，total ${totalCount} records</span>
 		</div>
-		<div class="pagination" targetType="navTab" totalCount="3019" numPerPage="{{.numPerPage}}" pageNumShown="10" currentPage="{{.pageNum}}"></div>
+		<div class="pagination" targetType="navTab" totalCount="200" numPerPage="20" pageNumShown="10" currentPage="1"></div>
 	</div>
 </div>

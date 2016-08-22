@@ -1,5 +1,5 @@
 <h2 class="contentTitle">edit seller</h2>
-<div class="pageContent">
+<div id="seller_edit_box" class="pageContent">
 	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="96">
 			<div class="seller-box">
@@ -218,7 +218,13 @@
 	                    <div class="img-show wh100" data-input-name="photo_href"></div>
 	                </div>
 				</div>
+				<div class="unit clearfix">
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
+				</div>
+				<hr>
 			</div>
+
 			<div class="item-box">
 				<h2 class="contentTitle">item list</h2>
 				<table class="table" width="100%">
@@ -244,7 +250,7 @@
 							<!--字段对应区域结束-->
 							<td>
 								<a title="item delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-								<a title="item edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
+								<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
 							</td>
 						</tr>
 						<tr target="sid_user" rel="2">
@@ -256,7 +262,7 @@
 							<!--字段对应区域结束-->
 							<td>
 								<a title="item delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-								<a title="item edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
+								<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
 							</td>
 						</tr>
 						<tr target="sid_user" rel="2">
@@ -268,7 +274,7 @@
 							<!--字段对应区域结束-->
 							<td>
 								<a title="item delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-								<a title="item edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
+								<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id=xxx" class="btnEdit">edit</a>
 							</td>
 						</tr>
 						<!-- data list -->
@@ -301,7 +307,7 @@
 
 							<td>
 								<a title="catalog delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-								<a title="catalog edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
+								<a title="catalog edit" rel="catalog_edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
 							</td>
 						</tr>
 						<tr target="sid_user" rel="2">
@@ -314,7 +320,7 @@
 
 							<td>
 								<a title="catalog delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-								<a title="catalog edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
+								<a title="catalog edit" rel="catalog_edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
 							</td>
 						</tr>
 						<!-- data list -->
@@ -322,7 +328,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="formBar">
+		<div class="formBar" style="display:none;">
 			<ul>
 				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
 				<li>
@@ -332,5 +338,12 @@
 		</div>
 	</form>
 </div>
-<script type="text/javascript" src="./dwz/js/grab.selectTime.js"></script>
-<script type="text/javascript" src="./dwz/js/imgUploadClass.js"></script>
+
+<script>
+	$(function(){
+		// 初始化时间选择
+		initSellerTimePick("#seller_edit_box");
+		//初始化并绑定图片上传
+		bindImgPicker("#seller_add_box");
+	});
+</script>

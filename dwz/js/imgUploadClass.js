@@ -104,15 +104,16 @@ function onAddBind($parents){
 
         });
 }
-// 图片上传demo
-jQuery(function() {
-    var $ = jQuery;
-    $('.img-show').on('click','.pic-box .close_img',function(){
-        var $picBox = $(this).parents('.pic-box');
-        $picBox.remove();
-    });
+function bindImgRemove(con_box_id){
+        $(con_box_id).find('.img-show').on('click','.pic-box .close_img',function(){
+            var $picBox = $(this).parents('.pic-box');
+            $picBox.remove();
+        });
+}
+function bindImgPicker(con_box_id){
+    bindImgRemove(con_box_id);
         // Web Uploader实例
-     $('.img-picker').each(function() {
+     $(con_box_id).find('.img-picker').each(function() {
             var $btn = $(this);
             // 初始化Web Uploader
             var uploader = WebUploader.create({
@@ -137,43 +138,6 @@ jQuery(function() {
             uploader.on('uploadSuccess', function(file,res) {
                 handlerImgUploader(file,res,$btn);
             });
-
-            // 当有文件添加进来的时候 , 测试通过：显示突破队列
-            // uploader.on( 'fileQueued', function( file ) {
-            //     var img_url = 'http://static.zhaogeshier.com/dist/www/v2/img/index/index-time-live-pic01.jpg';
-            //     var isOne = $btn.hasClass('img-one');
-            //     var isMore = $btn.hasClass('img-more');
-            //     var $imgShow = $btn.siblings(".img-show");
-            //     var iptName = $imgShow.attr("data-input-name");
-            //     var sTemp =  '';
-            //     sTemp += '<div class="pic-box">';
-            //     sTemp += '<span class="close_img"></span>';
-            //     sTemp += '<img src="'+img_url+'">';
-            //     sTemp += '<input type="hidden" name="'+iptName+'" value="'+img_url+'">';
-            //     sTemp += '</div>';
-
-            //     var $sTemp = $(sTemp);
-            //     var $img = $sTemp.find('img');
-            //     if(isOne){
-            //             $imgShow.html($sTemp);
-            //     }else if(isMore){
-            //             $imgShow.append($sTemp);
-            //     }else{
-            //             grabInfo("you have uploaded the picture before");
-            //     }
-            //     // 创建缩略图
-            //     var thumbnailWidth = 100,thumbnailHeight=100;
-
-            //     uploader.makeThumb( file, function( error, src ) {
-            //         if ( error ) {
-            //             $img.replaceWith('<span>不能预览</span>');
-            //             return;
-            //         }
-
-            //         $img.attr( 'src', src );
-            //     }, thumbnailWidth, thumbnailHeight );
-            // });
-
             // 文件上传失败，现实上传出错。
             uploader.on('uploadError', function(file) {
                 grabError('upload Error');
@@ -184,5 +148,5 @@ jQuery(function() {
             });
 
         });
-});
+}
 

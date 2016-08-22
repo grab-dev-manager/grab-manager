@@ -27,7 +27,7 @@
 		<ul class="toolBar">
 			<li><a class="add" href="./server/item/add.html" target="navTab" title="item add"><span>add</span></a></li>
 			<li><a class="delete" target="selectedTodo" rel="ids" href="./dwz/demo/common/ajaxDone.html?uid={sid_user}" title="delete"><span>delete</span></a></li>
-			<li><a class="edit" href="./server/item/edit.html?uid={sid_user}" target="navTab" title="item edit"><span>edit</span></a></li>
+			<li><a class="item edit" rel="item_edit" href="./server/item/edit.html?uid={sid_user}" target="navTab" title="item edit"><span>edit</span></a></li>
 			<li class="line">line</li>
 		</ul>
 	</div>

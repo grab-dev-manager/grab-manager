@@ -1,6 +1,6 @@
 <!--引入CSS-->
 <h2 class="contentTitle">edit item</h2>
-<div class="pageContent">
+<div class="pageContent" id="item_edit_box">
 	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="96">
 			<p>
@@ -70,4 +70,9 @@
 	</form>
 </div>
 <!--引入JS-->
-<script type="text/javascript" src="./dwz/js/imgUploadClass.js"></script>
+
+<script>
+	$(function(){
+		bindImgPicker("#item_edit_box");
+	});
+</script>

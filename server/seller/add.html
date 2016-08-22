@@ -1,6 +1,6 @@
 <!--引入CSS-->
 <h2 class="contentTitle">edit seller</h2>
-<div class="pageContent">
+<div id="seller_add_box" class="pageContent">
 	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="96">
 			<p>
@@ -233,5 +233,11 @@
 	</form>
 </div>
 <!--引入JS-->
-<script type="text/javascript" src="./dwz/js/grab.selectTime.js"></script>
-<script type="text/javascript" src="./dwz/js/imgUploadClass.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 初始化时间选择
+		initSellerTimePick("#seller_edit_box");
+		//初始化并绑定图片上传
+		bindImgPicker("#seller_add_box");
+	});
+</script>
