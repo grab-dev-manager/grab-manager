@@ -19,11 +19,38 @@
 				<div class="unit">
 					<p>
 						<label>country :</label>
-						<input name="country" value="{{.country}}" type="text" size="30" />
+						<select class="combox" name="country"  class="required">
+							<option value="all">select contry</option>
+							<option value="Bahamas, The">Bahamas, The</option>
+							<option value="Bahrain">Bahrain</option>
+							<option value="Bangladesh">Bangladesh</option>
+							<option value="Barbados">Barbados</option>
+							<option value="Belarus">Belarus</option>
+							<option value="Belgium">Belgium</option>
+							<option value="Belize">Belize</option>
+							<option value="Benin">Benin</option>
+							<option value="Bhutan">Bhutan</option>
+							<option value="Bolivia">Bolivia</option>
+							<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+						</select>
 					</p>
 					<p>
 						<label>timezone :</label>
-						<input name="timezone" type="text" value = "{{.timezone}}" size="30" />
+						<select class="combox" name="timezone">
+							<option value="all">select timezone</option>
+							<option value="Africa/Algiers">Africa/Algiers </option>
+							<option value="Africa/Asmara">Africa/Asmara</option>
+							<option value="Africa/Bamako">Africa/Bamako</option>
+							<option value="Africa/Bangui">Africa/Bangui</option>
+							<option value="Africa/Banjul">Africa/Banjul</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="Africa/Bissau">Africa/Bissau</option>
+						</select>
 					</p>
 					<p>
 						<label>state :</label>
@@ -268,7 +295,7 @@
 					<div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div>
 					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
 				</div>
-				<hr>
+				<div class="thought-line"></div>
 			</div>
 			{{end}}
 			<div class="item-box">
