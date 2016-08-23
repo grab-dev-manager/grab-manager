@@ -11,7 +11,7 @@ span.error{
 }
 .day-time-select label{
 	width:80px;
-	margin-left: 30px;
+	margin-left: 41px;
 }
 .service_hours{
 	float: left;
@@ -23,4 +23,32 @@ span.error{
 .time-selected{
 	background: #019875 !important;
 	color:#ffffff !important;
+}
+.thought-line{
+	height: 1px;
+	width:100%;
+	background: #b8d0d6;
+}
+.item-box h2,
+.catalog-box h2{
+	font-size:16px;
+	line-height: 28px;
+}
+.grab-btn-box .button{
+
+}
+.grab-btn-box button{
+	padding:0;
+}
+.grab-btn-box .buttonActive{
+
+}
+.mr10{
+	margin-right: 10px;
+}
+.grab-upload{
+    margin-left: 130px;
+}
+.grab-upload .pic-box{
+	margin-top: 10px;
 }

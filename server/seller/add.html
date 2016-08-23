@@ -52,7 +52,7 @@
 					<label>geo_location :</label>
 					<input name="geo_location"  type="text" size="30" />
 				</p>
-
+				
 			</div>
 			<p>
 				<label>phone_number :</label>
@@ -98,7 +98,7 @@
 				<label>active :</label>
 				<input name="active" type="text" size="30" />
 			</p>
-			<div class="unit">
+			<div class="unit clearfix">
 				<div class="left service_hours">
 					<div>service_hours :</div>
 					<ul class="day-time-select">
@@ -194,19 +194,14 @@
 						</ul>
 					</div>
 			</div>
-			<div class="unit">
+			<p>
 				<label>homepage_href :</label>
-				<!--dom结构部分-->
-				<div class="upload-img-one">
-					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-                    <div class="img-picker img-one">select </div>
-                    <div class="img-show wh150" data-input-name="homepage_href"></div>
-                </div>
-			</div>
+				<input name="homepage_href" type="text" size="50" />
+			</p>
 			<div class="unit">
 				<label>icon :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
                     <div class="img-picker img-one">select </div>
                     <div class="img-show wh150" data-input-name="icon_href"></div>
@@ -215,7 +210,7 @@
 			<div class="unit">
 				<label>photo :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
                     <div class="img-picker img-more">select </div>
                     <div class="img-show wh150" data-input-name="photo_href"></div>
@@ -236,7 +231,7 @@
 <script type="text/javascript">
 	$(function(){
 		// 初始化时间选择
-		initSellerTimePick("#seller_edit_box");
+		initSellerTimePick("#seller_add_box");
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_add_box");
 	});

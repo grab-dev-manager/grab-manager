@@ -25,7 +25,7 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="./server/seller/add.html" target="navTab" title="seller add"><span>add</span></a></li>
+			<li><a class="add" rel="seller_add" href="./server/seller/add.html" target="navTab" title="seller add"><span>add</span></a></li>
 			<li><a class="delete" target="selectedTodo" rel="ids" href="demo/common/ajaxDone.html?uid={sid_user}" title="delete"><span>delete</span></a></li>
 			<li><a class="edit" rel="seller_edit" href="./server/seller/edit.html?uid={sid_user}" target="navTab" title="seller edit"><span>edit</span></a></li>
 			<li class="line">line</li>
@@ -61,7 +61,7 @@
 
 				<td>
 					<a title="seller delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id=xxx" class="btnDel">delete</a>
-					<a title="seller edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
+					<a title="seller edit" rel="seller_edit" target="navTab" href="./server/seller/edit.html?id=xxx" class="btnEdit">edit</a>
 				</td>
 			</tr>
 			<?php } ?>

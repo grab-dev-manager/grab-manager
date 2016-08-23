@@ -27,10 +27,10 @@
 				<label>sort_order :</label>
 				<input name="currency_code" type="text" value="{{.sort_order}}" size="30"  class="required"/>
 			</p>
-			<p>
+			<div class="unit">
 				<label>description :</label>
-				<input name="currency_code" type="text" value={{.description}} size="30"  class="required"/>
-			</p>
+				<textarea  name="description" value="{{.description}}" rows="6" cols="104">{{.description}}</textarea>
+			</div>
 			<p>
 				<label>status :</label>
 				<input name="currency_code" type="text" value="{{.status}}" size="30"  class="required"/>
@@ -42,26 +42,39 @@
 			<div class="unit">
 				<label>icon :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-                    <div class="img-picker img-one">select </div>
-					{{range .icon_href}}
-                    <div class="img-show wh150" data-input-name="{{.}}"></div>
-					{{end}}
-                </div>
+					<div class="img-picker img-one">select </div>
+					<div class="img-show wh150" data-input-name="icon_href">
+						<!-- 有图片就显示 -->
+						<div class="pic-box">
+							<span class="close_img"></span>
+							<img src="{{.icon_href}}">
+							<input type="hidden" name="icon_href" value="{{.icon_href}}">
+						</div>
+						<!-- 有图片就显示结束 -->
+					</div>
+				</div>
 			</div>
 			<div class="unit">
 				<label>photo :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-                    <div class="img-picker img-more">select </div>
-                    {{range .photo_href}}
-					<div class="img-show wh150" data-input-name="{{.}}"></div>
-					{{end}}
-                </div>
+					<div class="img-picker img-more">select </div>
+					<div class="img-show wh150" data-input-name="photo_href">
+						<!-- 有图片就显示 -->
+						{{range .photo_href}}
+						<div class="pic-box">
+							<span class="close_img"></span>
+							<img src="{{.}}">
+							<input type="hidden" name="photo_href" value="{{.}}">
+						</div>
+						{{end}}
+						<!-- 有图片就显示结束 -->
+					</div>
+				</div>
 			</div>
-			
 		</div>
 		<div class="formBar">
 			<ul>

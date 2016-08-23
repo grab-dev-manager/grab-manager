@@ -1,7 +1,7 @@
 <h2 class="contentTitle">edit seller</h2>
 <div id="seller_edit_box" class="pageContent">
 	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
-		<div class="pageFormContent" layoutH="96">
+		<div class="pageFormContent" layoutH="62">
 			{{with .seller_info}}
 			<div class="seller-box">
 				<p>
@@ -61,7 +61,7 @@
 				</p>
 				<div class="unit">
 					<label>description :</label>
-					<textarea  name="description" value="{{.description}}" rows="6" cols="104">description</textarea>
+					<textarea  name="description" value="{{.description}}" rows="6" cols="104">{{.description}}</textarea>
 				</div>
 				<p>
 					<label>tags :</label>
@@ -224,36 +224,45 @@
 							</ul>
 						</div>
 				</div>
-				<div class="unit">
+				<p>
 					<label>homepage_href :</label>
-					<!--dom结构部分-->
-					<div class="upload-img-one">
-						<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-	                    <div class="img-picker img-one">select </div>
-	                    <div class="img-show wh100" data-input-name="homepage_href"></div>
-	                </div>
-				</div>
+					<input name="homepage_href" type="text" size="50" />
+				</p>
 				<div class="unit">
 					<label>icon :</label>
 					<!--dom结构部分-->
-					<div class="upload-img-one">
+					<div class="upload-img-one grab-upload">
 						<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-	                    <div class="img-picker img-one">select </div>
-						{{range .icon_href}}
-	                    <div class="img-show wh100" data-input-name="{{.}}"></div>
-						{{end}}
-	                </div>
+						<div class="img-picker img-one">select </div>
+						<div class="img-show wh100" data-input-name="icon_href">
+							<!-- 有图片就显示 -->
+							<div class="pic-box">
+								<span class="close_img"></span>
+								<img src="{{.icon_href}}">
+								<input type="hidden" name="icon_href" value="{{.icon_href}}">
+							</div>
+							<!-- 有图片就显示结束 -->
+						</div>
+					</div>
 				</div>
 				<div class="unit">
 					<label>photo :</label>
 					<!--dom结构部分-->
-					<div class="upload-img-one">
+					<div class="upload-img-one grab-upload">
 						<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
-	                    <div class="img-picker img-more">select </div>
-						{{range .photo_href}}
-	                    <div class="img-show wh100" data-input-name="{{.}}"></div>
-						{{end}}
-	                </div>
+						<div class="img-picker img-more">add </div>
+						<div class="img-show wh100" data-input-name="photo_href">
+							<!-- 有图片就显示 -->
+							{{range .photo_href}}
+							<div class="pic-box">
+								<span class="close_img"></span>
+								<img src="{{.}}">
+								<input type="hidden" name="photo_href" value="{{.}}">
+							</div>
+							{{end}}
+							<!-- 有图片就显示结束 -->
+						</div>
+					</div>
 				</div>
 				<div class="unit clearfix">
 					<div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div>
@@ -264,6 +273,12 @@
 			{{end}}
 			<div class="item-box">
 				<h2 class="contentTitle">item list</h2>
+				<div class="panelBar">
+					<ul class="toolBar">
+						<li><a class="add" rel="item_add" href="./server/item/add.html" target="navTab" title="item add"><span>add</span></a></li>
+						<li class="line">line</li>
+					</ul>
+				</div>
 				<table class="table" width="100%">
 					<thead>
 						<tr>
@@ -300,8 +315,12 @@
 			</div>
 			<div class="catalog-box">
 				<h2 class="contentTitle">catalog list</h2>
-				{{with .catalogs}}
-				{{range .}}
+				<div class="panelBar">
+					<ul class="toolBar">
+						<li><a class="add" rel="item_add" href="./server/catalog/add.html" target="navTab" title="catalog add"><span>add</span></a></li>
+						<li class="line">line</li>
+					</ul>
+				</div>
 				<table class="table" width="100%">
 					<thead>
 						<tr>
@@ -316,6 +335,8 @@
 					</thead>
 					<tbody>
 						<!-- data list  -->
+						{{with .catalogs}}
+						{{range .}}
 						<tr target="sid_user" rel="2">
 							<!--字段对应区域开始-->
 							<td>{{.catalog_name}}</td>
@@ -329,11 +350,11 @@
 								<a title="catalog edit" rel="catalog_edit" target="navTab" href="./server/seller/edit.html?id={{.id}}" class="btnEdit">edit</a>
 							</td>
 						</tr>
+						{{end}}
+						{{end}}
 						<!-- data list -->
 					</tbody>
 				</table>
-				{{end}}
-				{{end}}
 			</div>
 		</div>
 		<div class="formBar" style="display:none;">
@@ -352,6 +373,6 @@
 		// 初始化时间选择
 		initSellerTimePick("#seller_edit_box");
 		//初始化并绑定图片上传
-		bindImgPicker("#seller_add_box");
+		bindImgPicker("#seller_edit_box");
 	});
 </script>

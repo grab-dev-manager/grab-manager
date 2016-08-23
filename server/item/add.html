@@ -9,40 +9,40 @@
 			</p>
 			<p>
 				<label>seller_id  :</label>
-				<input name="seller_id " type="text" value="" size="30"  class="required"/>
+				<input name="seller_id " type="text" value="xxxxx" size="30" readonly="true" />
 			</p>
 			<p>
 				<label>type  :</label>
-				<input name="type " type="text" value="" size="30"  class="required"/>
+				<input name="type " type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>estimated_price  :</label>
-				<input name="estimated_price " type="text" value="" size="30"  class="required"/>
+				<input name="estimated_price " type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>currency_code  :</label>
-				<input name="currency_code " type="text" value="" size="30"  class="required"/>
+				<input name="currency_code " type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>sort_order :</label>
-				<input name="sort_order" type="text" value="" size="30"  class="required"/>
+				<input name="sort_order" type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>description :</label>
-				<input name="description" type="text" value="" size="30"  class="required"/>
+				<input name="description" type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>status :</label>
-				<input name="status" type="text" value="" size="30"  class="required"/>
+				<input name="status" type="text" value="" size="30"/>
 			</p>
 			<p>
 				<label>sold :</label>
-				<input name="sold" type="text" value="" size="30"  class="required"/>
+				<input name="sold" type="text" value="" size="30"/>
 			</p>
 			<div class="unit">
 				<label>icon :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
                     <div class="img-picker img-one">select </div>
                     <div class="img-show wh150" data-input-name="icon_href"></div>
@@ -51,7 +51,7 @@
 			<div class="unit">
 				<label>photo :</label>
 				<!--dom结构部分-->
-				<div class="upload-img-one">
+				<div class="upload-img-one grab-upload">
 					<!-- class img-one:单张图 img-more:多张图 data-input-name代表后台对象的接收字段名-->
                     <div class="img-picker img-more">select </div>
                     <div class="img-show wh150" data-input-name="photo_href"></div>
@@ -72,6 +72,6 @@
 <!--引入JS-->
 <script type="text/javascript">
 	$(function(){
-		bindImgPicker("#seller_add_box");
+		bindImgPicker("#item_add_box");
 	});
 </script>
