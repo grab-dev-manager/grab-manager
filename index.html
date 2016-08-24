@@ -47,7 +47,7 @@ $(function(){
 		debug:false,	// 调试模式 【true|false】
 		callback:function(){
 			initEnv();
-			$("#themeList").theme({themeBase:"themes"}); // themeBase 相对于index页面的主题base路径
+			$("#themeList").theme({themeBase:"./dwz/themes"}); // themeBase 相对于index页面的主题base路径
 		}
 	});
 });
@@ -62,6 +62,16 @@ $(function(){
 				<a class="logo" href="http://www.grab.com">Grab</a>
 			</div>
 			<!-- navMenu -->
+			<ul class="nav">
+				<li><a href="login.html">退出</a></li>
+			</ul>
+			<ul class="themeList" id="themeList">
+				<li theme="default"><div class="selected">蓝色</div></li>
+				<li theme="green"><div>绿色</div></li>
+				<li theme="purple"><div>紫色</div></li>
+				<!-- <li theme="silver"><div>银色</div></li>
+				<li theme="azure"><div>天蓝</div></li> -->
+			</ul>
 		</div>
 
 		<div id="leftside">
