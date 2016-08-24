@@ -112,57 +112,43 @@
 							<li  class="clearfix">
 								<label>Monday :</label>
 								{{with .mon}}
-								<input name="service_hours[mon][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[mon][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[mon][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Tuesday :</label>
 								{{with .tue}}
-								<input name="service_hours[tue][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[tue][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[tue][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Wednesday :</label>
 								{{with .wed}}
-								<input name="service_hours[wed][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[wed][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[wed][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Thursday :</label>
 								{{with .thu}}
-								<input name="service_hours[thu][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[thu][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[thu][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Friday :</label>
 								{{with .fri}}
-								<input name="service_hours[fri][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[fri][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[fri][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li class="clearfix">
 								<label>Saturday :</label>
 								{{with .sat}}
-								<input name="service_hours[sat][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[sat][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[sat][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Sunday :</label>
 								{{with .sun}}
-								<input name="service_hours[sun][start]" class="timepick" value={{.start}} type="text" size="10" />
-								<span>-</span>
-								<input name="service_hours[sun][end]" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[sun][start]" class="timeRange" value={{.start}} type="text" size="30" />
 								{{end}}
 							</li>
 							{{end}}
@@ -175,57 +161,43 @@
 								<li  class="clearfix">
 									<label>Monday :</label>
 									{{with .mon}}
-									<input name="opening_hours[mon][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[mon][end]" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[mon][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Tuesday :</label>
 									{{with .tue}}
-									<input name="opening_hours[tue][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[tue][end]" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[tue][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Wednesday :</label>
 									{{with .wed}}
-									<input name="opening_hours[wed][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[wed][end]"class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[wed][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Thursday :</label>
 									{{with .thu}}
-									<input name="opening_hours[thu][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[thu][end]"class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[thu][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Friday :</label>
 									{{with .fri}}
-									<input name="opening_hours[fri][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[fri][end]"class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[fri][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li class="clearfix">
 									<label>Saturday :</label>
 									{{with .sat}}
-									<input name="opening_hours[sat][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[sat][end]"class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[sat][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Sunday :</label>
 									{{with .sun}}
-									<input name="opening_hours[sun][start]" class="timepick" value={{.start}} type="text" size="10" />
-									<span>-</span>
-									<input name="opening_hours[sun][end]"class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[sun][start]" class="timeRange" value={{.start}} type="text" size="30" />
 									{{end}}
 								</li>
 								{{end}}
@@ -379,7 +351,8 @@
 <script>
 	$(function(){
 		// 初始化时间选择
-		initSellerTimePick("#seller_edit_box");
+		// initSellerTimePick("#seller_edit_box");
+		bindSelectSDD("#seller_edit_box");
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_edit_box");
 	});
