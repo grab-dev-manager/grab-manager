@@ -10,28 +10,25 @@
 				</p>
 				<p>
 					<label>name :</label>
-					<input name="name" type="text" size="30" value={{.name}}  class="required"/>
+					<input name="name" type="text" size="30" value="{{.country}}"  class="required"/>
 				</p>
 				<p>
 					<label>business_type :</label>
-					<input name="business_type" type="text" size="30" value="{{.type}}"  class="required"/>
+					<input name="business_type" type="text" size="30" value="{{.business_type}}"  class="required"/>
 				</p>
 				<div class="unit">
 					<p>
 						<label>country :</label>
-						<select class="combox" name="country"  class="required">
-							<option value="all">{{.country}}</option>
-							<option value="Indonesia">Indonesia</option>
-							<option value="Singapore">Singapore</option>
-						</select>
+						<input name="country" value="{{.country}}" type="text" size="30" />
 					</p>
 					<p>
 						<label>timezone :</label>
-						<select class="combox" name="timezone">
-							<option value="all">{{.timezone}}</option>
+						<input name="timezone" value="{{.timezone}}" type="text" size="30" />
+						<!--select class="combox" name="timezone">
+							<option value="">{{.timezone}}</option>
 							<option value="Asia/Jakarta">Asia/Jakarta</option>
 							<option value="Asia/Singapore">Asia/Singapore</option>
-						</select>
+						</select-->
 					</p>
 					<p>
 						<label>state :</label>
@@ -265,7 +262,7 @@
 							<div class="pic-box">
 								<span class="close_img"></span>
 								<img src="{{.}}">
-								<input type="hidden" name="photo_href[]" value="{{.}}">
+								<input type="hidden" name="photo_href" value="{{.}}">
 							</div>
 							{{end}}
 							<!-- 有图片就显示结束 -->
