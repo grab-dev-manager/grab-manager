@@ -1,101 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" type="image/ico" href="login/images/favicon.ico" />
-    <title>Grab Login</title>
-    <link href="login/styles.css" type="text/css" media="screen" rel="stylesheet" />
-    <link href="login/jquery-ui-1.8.16.custom.css" rel="stylesheet">
-    <script src="login/jquery-1.6.2.min.js"></script>
-    <script src="login/jquery-ui-1.8.16.custom.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Grab Management</title>
+<link href="./dwz/themes/css/login.css" rel="stylesheet" type="text/css" />
 </head>
-<body id="login">
-    <div id="wrappertop">
-    </div>
-    <div id="wrapper">
-        <div id="content">
-            <div id="header" style="text-align:center;">
-                <h1 style="font-size:28px;line-height:40px;margin-left: -20px;">GRAB</h1>
-            </div>
-            <div id="darkbanner" class="banner320">
-                <h2>Login  System</h2>
-            </div>
-            <div id="darkbannerwrap">
-            </div>
-            <form name="form1" method="post" action="index.php">
-            <fieldset class="form">
-                <p>
-                    <label class="loginlabel" for="user_name">Username:</label>
-                    <input class="logininput ui-keyboard-input ui-widget-content ui-corner-all" name="user_name"
-                        id="user_name" type="text" value="" />
-                </p>
-                <p>
-                    <label class="loginlabel" for="user_password">Password:</label>
-                    <span>
-                        <input class="logininput ui-keyboard-input ui-widget-content ui-corner-all"   name="user_password" id="user_password" type="password" /></span>
-                </p>
-                <button id="loginbtn" type="button" class="positive" name="Submit">
-                    <img src="login/key.png" alt="Announcement" />Login</button>
-            </fieldset>
-        </div>
-    </div>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#passwd').click(function() {
-                $('#user_password').getkeyboard().reveal();
-            })
-
-            $(".logininput").blur(function() {
-                if ($(this).val() == "") {
-                    $(this).css("border-color", "red");
-                                    }
-                else
-                    $(this).css("border-color", "#D9D6C4");
-            })
-
-            $("#loginbtn").click(function() {
-                var k = 0;
-                var ajaxhtml = "";
-                $(".logininput").each(function(i, obj) {
-                    if ($(obj).val().trim() == "") {
-                        k++;
-                        $(this).css("border-color", "red");
-                        $(this).focus();
-                        return false;
-                    }
-                });
-                if (k != 0) return;
-                ajaxhtml = $("#loginbtn").html();
-                $("#loginbtn").html("Loading....  <img src='login/loading.gif' alt='Announcement' /> ");
-                $("#loginbtn").attr("disabled", "disabled");
-
-                //开启登录对接接口时，注释该代码
-                /*============ 注释*/
-                setTimeout(function(){
-                    window.location.href = './index.html';
-                },500);
-                return;
-                /*============ 注释*/
-
-                //登录对接接口
-                /*请求之地*/
-                var __page_url = '';
-                $.ajax({
-                     type: "POST",
-                     url: __page_url,
-                     dataType:'json',
-                     data: $("form").serialize(),
-                     success: function(res){
-                        if(res.code == 0){
-                            window.location.href = './index.html';
-                        }else{
-                            alert(res.msg);
-                        }
-                     }
-                  });
-            })
-        });
-        
-    </script>
+<body>
+	<div id="login">
+		<div id="login_header">
+			<h1 class="login_logo">
+				<a href="http://demo.dwzjs.com"><img src="./dwz/themes/default/images/login_logo.png" /></a>
+			</h1>
+			<div class="login_headerContent">
+				<div class="navList"></div>
+				<h2 class="login_title"><img src="./dwz/themes/default/images/login_title.png" /></h2>
+			</div>
+		</div>
+		<div id="login_content">
+			<div class="loginForm">
+				<form action="index.html">
+					<p>
+						<label>username: </label>
+						<input type="text" name="username" size="20" class="login_input" />
+					</p>
+					<p>
+						<label>password: </label>
+						<input type="password" name="password" size="20" class="login_input" />
+					</p>
+					<div class="login_bar">
+						<input class="sub" type="submit" value=" " />
+					</div>
+				</form>
+			</div>
+			<div class="login_banner"><img src="./dwz/themes/default/images/login_banner.jpg" /></div>
+			<div class="login_main">
+				<ul class="helpList"></ul>
+				<div class="login_inner">
+					<p>support.sg@grab.com</p>
+				</div>
+			</div>
+		</div>
+		<div id="login_footer">
+			&copy; Grab 2016
+		</div>
+	</div>
 </body>
+</html>
