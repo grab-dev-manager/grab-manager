@@ -98,102 +98,74 @@
 				<label>active :</label>
 				<input name="active" type="text" size="30" />
 			</p>
-			<div class="unit clearfix">
-				<div class="left service_hours">
-					<div>service_hours :</div>
-					<ul class="day-time-select">
-						<li  class="clearfix">
-							<label>Monday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li  class="clearfix">
-							<label>Tuesday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li  class="clearfix">
-							<label>Wednesday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li  class="clearfix">
-							<label>Thursday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li  class="clearfix">
-							<label>Friday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li class="clearfix">
-							<label>Saturday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-						<li  class="clearfix">
-							<label>Sunday :</label>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-							<span>-</span>
-							<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-						</li>
-					</ul>
-				</div>
-				<div class="right opening_hours">
-					<div>opening_hours :</div>
+				<div class="unit">
+					<div class="left service_hours">
+						<div>service_hours :</div>
 						<ul class="day-time-select">
 							<li  class="clearfix">
 								<label>Monday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[mon][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Tuesday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[tue][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Wednesday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[wed][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Thursday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[thu][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Friday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[fri][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li class="clearfix">
 								<label>Saturday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[sat][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Sunday :</label>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
-								<span>-</span>
-								<input name="opening_hours" class="timepick" value="" type="text" size="10" />
+								<input name="service_hours[sun][start]" class="timeRange" value="" type="text" size="30" />
 							</li>
 						</ul>
 					</div>
-			</div>
+					<div class="right opening_hours">
+						<div>opening_hours :</div>
+							<ul class="day-time-select">
+								<li  class="clearfix">
+									<label>Monday :</label>
+									<input name="opening_hours[mon][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Tuesday :</label>
+									<input name="opening_hours[tue][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Wednesday :</label>
+									<input name="opening_hours[wed][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Thursday :</label>
+									<input name="opening_hours[thu][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Friday :</label>
+									<input name="opening_hours[fri][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li class="clearfix">
+									<label>Saturday :</label>
+									<input name="opening_hours[sat][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Sunday :</label>
+									<input name="opening_hours[sun][start]" class="timeRange" value="" type="text" size="30" />
+								</li>
+							</ul>
+						</div>
+				</div>
 			<p>
 				<label>homepage_href :</label>
 				<input name="homepage_href" type="text" size="50" />
@@ -231,8 +203,11 @@
 <script type="text/javascript">
 	$(function(){
 		// 初始化时间选择
-		initSellerTimePick("#seller_add_box");
+		bindSelectSDD("#seller_add_box");
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_add_box");
+		$(document).click(function(){
+			$('#timeRange_div').remove();
+		});
 	});
 </script>
