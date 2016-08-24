@@ -1,6 +1,6 @@
 <h2 class="contentTitle">edit seller</h2>
 <div id="seller_edit_box" class="pageContent">
-	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<form method="post" action="/api/sellers" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="62">
 			{{with .seller_info}}
 			<div class="seller-box">
@@ -20,36 +20,17 @@
 					<p>
 						<label>country :</label>
 						<select class="combox" name="country"  class="required">
-							<option value="all">select contry</option>
-							<option value="Bahamas, The">Bahamas, The</option>
-							<option value="Bahrain">Bahrain</option>
-							<option value="Bangladesh">Bangladesh</option>
-							<option value="Barbados">Barbados</option>
-							<option value="Belarus">Belarus</option>
-							<option value="Belgium">Belgium</option>
-							<option value="Belize">Belize</option>
-							<option value="Benin">Benin</option>
-							<option value="Bhutan">Bhutan</option>
-							<option value="Bolivia">Bolivia</option>
-							<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+							<option value="all">{{.country}}</option>
+							<option value="Indonesia">Indonesia</option>
+							<option value="Singapore">Singapore</option>
 						</select>
 					</p>
 					<p>
 						<label>timezone :</label>
 						<select class="combox" name="timezone">
-							<option value="all">select timezone</option>
-							<option value="Africa/Algiers">Africa/Algiers </option>
-							<option value="Africa/Asmara">Africa/Asmara</option>
-							<option value="Africa/Bamako">Africa/Bamako</option>
-							<option value="Africa/Bangui">Africa/Bangui</option>
-							<option value="Africa/Banjul">Africa/Banjul</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
-							<option value="Africa/Bissau">Africa/Bissau</option>
+							<option value="all">{{.timezone}}</option>
+							<option value="Asia/Jakarta">Asia/Jakarta</option>
+							<option value="Asia/Singapore">Asia/Singapore</option>
 						</select>
 					</p>
 					<p>
@@ -131,57 +112,57 @@
 							<li  class="clearfix">
 								<label>Monday :</label>
 								{{with .mon}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[mon][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[mon][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Tuesday :</label>
 								{{with .tue}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[tue][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[tue][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Wednesday :</label>
 								{{with .wed}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[wed][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[wed][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Thursday :</label>
 								{{with .thu}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[thu][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[thu][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Friday :</label>
 								{{with .fri}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[fri][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[fri][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li class="clearfix">
 								<label>Saturday :</label>
 								{{with .sat}}
-								<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[sat][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[sat][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							<li  class="clearfix">
 								<label>Sunday :</label>
 								{{with .sun}}
-								<input name="service_hours" class="timepick" value={{.start}} type="text" size="10" />
+								<input name="service_hours[sun][start]" class="timepick" value={{.start}} type="text" size="10" />
 								<span>-</span>
-								<input name="service_hours" class="timepick" value={{.end}} type="text" size="10" />
+								<input name="service_hours[sun][end]" class="timepick" value={{.end}} type="text" size="10" />
 								{{end}}
 							</li>
 							{{end}}
@@ -194,57 +175,57 @@
 								<li  class="clearfix">
 									<label>Monday :</label>
 									{{with .mon}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[mon][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[mon][end]" class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Tuesday :</label>
 									{{with .tue}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[tue][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[tue][end]" class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Wednesday :</label>
 									{{with .wed}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[wed][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[wed][end]"class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Thursday :</label>
 									{{with .thu}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[thu][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[thu][end]"class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Friday :</label>
 									{{with .fri}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[fri][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[fri][end]"class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li class="clearfix">
 									<label>Saturday :</label>
 									{{with .sat}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[sat][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[sat][end]"class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								<li  class="clearfix">
 									<label>Sunday :</label>
 									{{with .sun}}
-									<input name="opening_hours" class="timepick" value={{.start}} type="text" size="10" />
+									<input name="opening_hours[sun][start]" class="timepick" value={{.start}} type="text" size="10" />
 									<span>-</span>
-									<input name="opening_hours" class="timepick" value={{.end}} type="text" size="10" />
+									<input name="opening_hours[sun][end]"class="timepick" value={{.end}} type="text" size="10" />
 									{{end}}
 								</li>
 								{{end}}
@@ -284,7 +265,7 @@
 							<div class="pic-box">
 								<span class="close_img"></span>
 								<img src="{{.}}">
-								<input type="hidden" name="photo_href" value="{{.}}">
+								<input type="hidden" name="photo_href[]" value="{{.}}">
 							</div>
 							{{end}}
 							<!-- 有图片就显示结束 -->
@@ -313,7 +294,7 @@
 								<th>name</th>
 								<th>seller_id</th>
 								<th>type</th>
-								<th>estimated_price</th>
+								<th>price</th>
 								<!--字段对应区域结束-->
 							<th>operate</th>
 						</tr>

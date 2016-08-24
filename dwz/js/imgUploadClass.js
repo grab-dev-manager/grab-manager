@@ -77,6 +77,7 @@ function onAddBind($parents){
                 swf: BASE_URL+'/webuploader-0.1.5/Uploader.swf',
                 // 文件接收服务端。
                 server: SERVER_URL,
+                //sendAsBinary:true,
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.
                 pick: this,

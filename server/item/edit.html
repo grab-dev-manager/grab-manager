@@ -1,23 +1,24 @@
 <!--引入CSS-->
 <h2 class="contentTitle">edit item</h2>
 <div class="pageContent" id="item_edit_box">
-	<form method="post" action="./dwz/demo/common/ajaxDone.html" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<form method="post" action="/api/items" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="96">
+			<input name="id" type="hidden"  value="{{.id}}" />
 			<p>
 				<label>name :</label>
-				<input name="currency_code" type="text" value="{{.name}}" size="30"  class="required"/>
+				<input name="name" type="text" value="{{.name}}" size="30"  class="required"/>
 			</p>
 			<p>
 				<label>seller_id :</label>
-				<input name="currency_code" type="text" value="{{.sellerid}}" size="30"  class="required"/>
+				<input name="sellerid" type="text" value="{{.sellerid}}" size="30"  class="required"/>
 			</p>
 			<p>
 				<label>type :</label>
-				<input name="currency_code" type="text" value="{{.type}}" size="30"  class="required"/>
+				<input name="type" type="text" value="{{.type}}" size="30"  class="required"/>
 			</p>
 			<p>
 				<label>estimated_price :</label>
-				<input name="currency_code" type="text" value="{{.price}}" size="30"  class="required"/>
+				<input name="price" type="text" value="{{.price}}" size="30"  class="required"/>
 			</p>
 			<p>
 				<label>currency_code :</label>
@@ -25,7 +26,7 @@
 			</p>
 			<p>
 				<label>sort_order :</label>
-				<input name="currency_code" type="text" value="{{.sort_order}}" size="30"  class="required"/>
+				<input name="sort_order" type="text" value="{{.sort_order}}" size="30"  class="required"/>
 			</p>
 			<div class="unit">
 				<label>description :</label>
@@ -33,11 +34,11 @@
 			</div>
 			<p>
 				<label>status :</label>
-				<input name="currency_code" type="text" value="{{.status}}" size="30"  class="required"/>
+				<input name="status" type="text" value="{{.status}}" size="30"  class="required"/>
 			</p>
 			<p>
 				<label>sold :</label>
-				<input name="currency_code" type="text" value="{{.sold}}" size="30"  class="required"/>
+				<input name="sold" type="text" value="{{.sold}}" size="30"  class="required"/>
 			</p>
 			<div class="unit">
 				<label>icon :</label>
@@ -68,7 +69,7 @@
 						<div class="pic-box">
 							<span class="close_img"></span>
 							<img src="{{.}}">
-							<input type="hidden" name="photo_href" value="{{.}}">
+							<input type="hidden" name="photo_href[]" value="{{.}}">
 						</div>
 						{{end}}
 						<!-- 有图片就显示结束 -->
