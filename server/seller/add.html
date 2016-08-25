@@ -3,18 +3,18 @@
 <div id="seller_add_box" class="pageContent">
 	<form method="post" action="/api/sellers" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="96">
-			<p>
+			<!--p>
 				<label>referenceid :</label>
-				<input name="referenceid"  type="hidden" size="30"  readonly="true" />
-			</p>
+				<input name="referenceid"  type="text" size="30"  readonly="true" />
+			</p-->
 			<p>
 				<label>name :</label>
 				<input name="name" type="text" size="30"   class="required"/>
 			</p>
-			<p>
+			<!--p>
 				<label>business_type :</label>
 				<input name="business_type" type="text" size="30"   class="required"/>
-			</p>
+			</p-->
 			<div class="unit">
 				<p>
 					<label>country :</label>
@@ -79,7 +79,7 @@
 				<input name="halal"  type="text" size="30" />
 			</p>
 			<p>
-				<label style="width:140px;">estimated_delivery_time :</label>
+				<label >est_delivery_time :</label>
 				<input name="estimated_delivery_time"  type="text" size="30" />
 			</p>
 			<p>
@@ -97,6 +97,10 @@
 			<p>
 				<label>active :</label>
 				<input name="active" type="text" size="30" />
+			</p>
+			<p>
+				<label>homepage_href :</label>
+				<input name="homepage_href" type="text" size="50" />
 			</p>
 				<div class="unit">
 					<div class="left service_hours">
@@ -166,10 +170,7 @@
 							</ul>
 						</div>
 				</div>
-			<p>
-				<label>homepage_href :</label>
-				<input name="homepage_href" type="text" size="50" />
-			</p>
+
 			<div class="unit">
 				<label>icon :</label>
 				<!--dom结构部分-->

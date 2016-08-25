@@ -12,10 +12,10 @@
 					<label>name :</label>
 					<input name="name" type="text" size="30" value="{{.country}}"  class="required"/>
 				</p>
-				<p>
+				<!--p>
 					<label>business_type :</label>
 					<input name="business_type" type="text" size="30" value="{{.business_type}}"/>
-				</p>
+				</p-->
 				<div class="unit">
 					<p>
 						<label>country :</label>
@@ -84,7 +84,10 @@
 					<label>halal :</label>
 					<input name="halal" value="{{.halal}}" type="text" size="30" />
 				</p>
-				
+				<p>
+					<label >est_delivery_time :</label>
+					<input name="estimated_delivery_time" value="{{.estimated_delivery_time}}" type="text" size="30" />
+				</p>
 				<p>
 					<label>tax :</label>
 					<input name="tax" value="{{.tax}}" type="text" size="30" />
@@ -100,6 +103,10 @@
 				<p>
 					<label>active :</label>
 					<input name="active" value="{{.active}}" type="text" size="30" />
+				</p>
+				<p>
+					<label>homepage_href :</label>
+					<input name="homepage_href" type="text" size="50" />
 				</p>
 				<div class="unit">
 					<div class="left service_hours">
@@ -173,10 +180,6 @@
 							</ul>
 						</div>
 				</div>
-				<p>
-					<label>homepage_href :</label>
-					<input name="homepage_href" type="text" size="50" />
-				</p>
 				<div class="unit">
 					<label>icon :</label>
 					<!--dom结构部分-->
