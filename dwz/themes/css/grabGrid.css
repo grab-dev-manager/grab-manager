@@ -101,3 +101,12 @@
 }
 .grid .gridHeader th.hover, 
 .grid .gridHeader th.thSelected { background-position:0 -87px;}
+
+
+.grid .gridHeader th,
+.grid .gridTbody td{
+  text-indent: 2em;
+}
+.grid .gridTbody td .btn{
+  text-indent: 0;
+}
