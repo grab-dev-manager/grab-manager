@@ -23,7 +23,7 @@
 					</p>
 					<p>
 						<label>timezone :</label>
-						<input name="timezone" value="{{.timezone}}" type="text" size="30" />
+						<input name="timezone" value="{{.timezone}}" type="text" size="30" readonly="true"/>
 						<!--select class="combox" name="timezone">
 							<option value="">{{.timezone}}</option>
 							<option value="Asia/Jakarta">Asia/Jakarta</option>
@@ -90,7 +90,7 @@
 				</p>
 				<p>
 					<label>tax :</label>
-					<input name="tax" value="{{.tax}}" type="text" size="30" />
+					<input name="tax" value="{{.tax}}" type="text" size="30" readonly="true"/>
 				</p>
 				<p>
 					<label>commission :</label>
@@ -114,33 +114,34 @@
 						<ul class="day-time-select">
 							{{with .service_hours}}
 							<li  class="clearfix">
-								<label>Monday :</label>
+								<label>Sun :</label>
+								<input name="service_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
+							</li>
+							<li  class="clearfix">
+								<label>Mon :</label>
 								<input name="service_hours" class="timeRange" value="{{.mon}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
-								<label>Tuesday :</label>
+								<label>Tue :</label>
 								<input name="service_hours" class="timeRange" value="{{.tue}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
-								<label>Wednesday :</label>
+								<label>Wed :</label>
 								<input name="service_hours" class="timeRange" value="{{.wed}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
-								<label>Thursday :</label>
+								<label>Thu :</label>
 								<input name="service_hours" class="timeRange" value="{{.thu}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
-								<label>Friday :</label>
+								<label>Fri :</label>
 								<input name="service_hours" class="timeRange" value="{{.fri}}" type="text" size="30" />
 							</li>
 							<li class="clearfix">
-								<label>Saturday :</label>
+								<label>Sat :</label>
 								<input name="service_hours" class="timeRange" value="{{.sat}}" type="text" size="30" />
 							</li>
-							<li  class="clearfix">
-								<label>Sunday :</label>
-								<input name="service_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
-							</li>
+
 							{{end}}
 						</ul>
 					</div>
@@ -149,33 +150,34 @@
 							<ul class="day-time-select">
 								{{with .opening_hours}}
 								<li  class="clearfix">
-									<label>Monday :</label>
+									<label>Sun :</label>
 									<input name="opening_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
-									<label>Tuesday :</label>
+									<label>Mon :</label>
+									<input name="opening_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
+								</li>
+								<li  class="clearfix">
+									<label>Tue :</label>
 									<input name="opening_hours" class="timeRange" value="{{.tue}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
-									<label>Wednesday :</label>
+									<label>Wed :</label>
 									<input name="opening_hours" class="timeRange" value="{{.wed}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
-									<label>Thursday :</label>
+									<label>Thu :</label>
 									<input name="opening_hours" class="timeRange" value="{{.thu}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
-									<label>Friday :</label>
+									<label>Fri :</label>
 									<input name="opening_hours" class="timeRange" value="{{.fri}}" type="text" size="30" />
 								</li>
 								<li class="clearfix">
-									<label>Saturday :</label>
+									<label>Sat :</label>
 									<input name="opening_hours" class="timeRange" value="{{.sat}}" type="text" size="30" />
 								</li>
-								<li  class="clearfix">
-									<label>Sunday :</label>
-									<input name="opening_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
-								</li>
+
 								{{end}}
 							</ul>
 						</div>
