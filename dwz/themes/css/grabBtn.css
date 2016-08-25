@@ -278,6 +278,7 @@ a.btn:active {
   font-size: 22px;
 }
 .grid .gridTbody td div {
+  padding:5px 0;
   line-height: 35px;
   height: 35px;
 }
