@@ -66,7 +66,7 @@
 				</p>
 				<div class="unit">
 					<label>description :</label>
-					<textarea  name="description" value="{{.description}}" rows="6" cols="104">{{.description}}</textarea>
+					<textarea  name="description" value="{{.description}}" rows="6" cols="110">{{.description}}</textarea>
 				</div>
 				<p>
 					<label>tags :</label>
@@ -120,28 +120,42 @@
 							<li  class="clearfix">
 								<label>Mon :</label>
 								<input name="service_hours" class="timeRange" value="{{.mon}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Tue :</label>
 								<input name="service_hours" class="timeRange" value="{{.tue}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Wed :</label>
 								<input name="service_hours" class="timeRange" value="{{.wed}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Thu :</label>
 								<input name="service_hours" class="timeRange" value="{{.thu}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Fri :</label>
 								<input name="service_hours" class="timeRange" value="{{.fri}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li class="clearfix">
 								<label>Sat :</label>
 								<input name="service_hours" class="timeRange" value="{{.sat}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
+<<<<<<< HEAD
 
+=======
+							<li  class="clearfix">
+								<label>Sunday :</label>
+								<input name="service_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
+								<i class="selectTimeRange"></i>
+							</li>
+>>>>>>> cbc85dbdde617530b86910a1876825dde3836e22
 							{{end}}
 						</ul>
 					</div>
@@ -152,6 +166,7 @@
 								<li  class="clearfix">
 									<label>Sun :</label>
 									<input name="opening_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Mon :</label>
@@ -160,24 +175,37 @@
 								<li  class="clearfix">
 									<label>Tue :</label>
 									<input name="opening_hours" class="timeRange" value="{{.tue}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Wed :</label>
 									<input name="opening_hours" class="timeRange" value="{{.wed}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Thu :</label>
 									<input name="opening_hours" class="timeRange" value="{{.thu}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Fri :</label>
 									<input name="opening_hours" class="timeRange" value="{{.fri}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li class="clearfix">
 									<label>Sat :</label>
 									<input name="opening_hours" class="timeRange" value="{{.sat}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
+<<<<<<< HEAD
 
+=======
+								<li  class="clearfix">
+									<label>Sunday :</label>
+									<input name="opening_hours" class="timeRange" value="{{.sun}}" type="text" size="30" />
+									<i class="selectTimeRange"></i>
+								</li>
+>>>>>>> cbc85dbdde617530b86910a1876825dde3836e22
 								{{end}}
 							</ul>
 						</div>
@@ -311,7 +339,8 @@
 	$(function(){
 		// 初始化时间选择
 		// initSellerTimePick("#seller_edit_box");
-		bindSelectSDD("#seller_edit_box");
+		// bindSelectSDD("#seller_edit_box");
+		grabSelectSDD("#seller_edit_box");
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_edit_box");
 		$(document).click(function(){
