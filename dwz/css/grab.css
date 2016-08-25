@@ -26,6 +26,8 @@ span.error{
     outline: none;
     margin-left: 5px;
     font-size: 14px;
+    background: #31b0d5;
+    color:#fff;
 }
 .service_hours{
 	float: left;
