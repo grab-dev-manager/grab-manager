@@ -217,9 +217,16 @@
 <!--引入JS-->
 <script type="text/javascript">
 	$(function(){
+		/*
+		* default usual time
+		*/
+		var timeRangeJson = {
+			start:{hh:'10',mm:'30'},
+			end  :{hh:'21',mm:'00'}
+		}
 		// 初始化时间选择
 		// bindSelectSDD("#seller_add_box");
-		grabSelectSDD("#seller_add_box");
+		grabSelectSDD("#seller_add_box",timeRangeJson);
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_add_box");
 		$(document).click(function(){

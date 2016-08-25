@@ -325,7 +325,14 @@
 		// 初始化时间选择
 		// initSellerTimePick("#seller_edit_box");
 		// bindSelectSDD("#seller_edit_box");
-		grabSelectSDD("#seller_edit_box");
+		/*
+		* default usual time
+		*/
+		var timeRangeJson = {
+			start:{hh:'10',mm:'30'},
+			end  :{hh:'21',mm:'00'}
+		}
+		grabSelectSDD("#seller_edit_box",timeRangeJson);
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_edit_box");
 		$(document).click(function(){

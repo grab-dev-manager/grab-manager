@@ -6,11 +6,21 @@
 /*
 * default usual time
 */
-var timeRangeJson = {
-	start:{hh:'09',mm:'30'},
-	end  :{hh:'21',mm:'00'}
-}
-function grabSelectSDD(con_box_id){
+// var timeRangeJson = {
+// 	start:{hh:'09',mm:'30'},
+// 	end  :{hh:'21',mm:'00'}
+// }
+function grabSelectSDD(con_box_id,timeRangeJson){
+
+	if(timeRangeJson==undefined){
+		/*
+		* default usual time
+		*/
+		timeRangeJson = {
+			start:{hh:'09',mm:'30'},
+			end  :{hh:'21',mm:'00'}
+		}
+	}
 	$(con_box_id).find('.selectTimeRange').click(function(){
 		$('#timeRange_div').remove();
 		
