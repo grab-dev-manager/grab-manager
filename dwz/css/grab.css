@@ -10,6 +10,7 @@ span.error{
 	padding: 0 5px;
 }
 .day-time-select label{
+	font-size: 12px;
 	width:80px;
 	margin-left: 41px;
 }
