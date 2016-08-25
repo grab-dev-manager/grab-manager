@@ -109,30 +109,37 @@
 							<li  class="clearfix">
 								<label>Monday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Tuesday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Wednesday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Thursday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Friday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li class="clearfix">
 								<label>Saturday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 							<li  class="clearfix">
 								<label>Sunday :</label>
 								<input name="service_hours" class="timeRange" value="" type="text" size="30" />
+								<i class="selectTimeRange"></i>
 							</li>
 						</ul>
 					</div>
@@ -142,30 +149,37 @@
 								<li  class="clearfix">
 									<label>Monday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Tuesday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Wednesday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Thursday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Friday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li class="clearfix">
 									<label>Saturday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 								<li  class="clearfix">
 									<label>Sunday :</label>
 									<input name="opening_hours" class="timeRange" value="" type="text" size="30" />
+									<i class="selectTimeRange"></i>
 								</li>
 							</ul>
 						</div>
@@ -202,7 +216,8 @@
 <script type="text/javascript">
 	$(function(){
 		// 初始化时间选择
-		bindSelectSDD("#seller_add_box");
+		// bindSelectSDD("#seller_add_box");
+		grabSelectSDD("#seller_add_box");
 		//初始化并绑定图片上传
 		bindImgPicker("#seller_add_box");
 		$(document).click(function(){

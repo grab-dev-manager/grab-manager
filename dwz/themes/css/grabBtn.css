@@ -305,3 +305,14 @@ a.btn:active {
   right: 10px;
   /*#00B140*/
 }
+
+.selectTimeRange{
+  position: relative;
+  right: 20px;
+  top:0;
+  cursor: pointer;
+  float: left;
+  width:20px;
+  height: 20px;
+  background: url(../default/images/time-picker.png) no-repeat;
+}

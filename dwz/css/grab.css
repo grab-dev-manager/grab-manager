@@ -70,3 +70,9 @@ span.error{
 .grab-upload .pic-box{
 	margin-top: 10px;
 }
+
+/*服务时间选择*/
+.day-time-select li{
+	position: relative;
+	margin:5px 0;
+}
