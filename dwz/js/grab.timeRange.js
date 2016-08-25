@@ -1,4 +1,15 @@
 
+/*
+* author : xiangjun@daxiangclass.com
+*
+*/
+/*
+* default usual time
+*/
+var timeRangeJson = {
+	start:{hh:'09',mm:'30'},
+	end  :{hh:'21',mm:'00'}
+}
 function grabSelectSDD(con_box_id){
 	$(con_box_id).find('.selectTimeRange').click(function(){
 		$('#timeRange_div').remove();
@@ -36,6 +47,11 @@ function grabSelectSDD(con_box_id){
 			html.find('#timeRange_b').val(v[1]);
 			html.find('#timeRange_c').val(v[2]);
 			html.find('#timeRange_d').val(v[3]);
+		}else{
+			html.find('#timeRange_a').val(timeRangeJson.start.hh);
+			html.find('#timeRange_b').val(timeRangeJson.start.mm);
+			html.find('#timeRange_c').val(timeRangeJson.end.hh);
+			html.find('#timeRange_d').val(timeRangeJson.end.mm);
 		}
 		// 点击确定的时候
 		var pObj = $(this).siblings('input');
