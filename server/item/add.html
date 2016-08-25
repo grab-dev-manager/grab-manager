@@ -2,7 +2,7 @@
 <h2 class="contentTitle">edit item</h2>
 <div id="item_add_box" class="pageContent">
 	<form method="post" action="/api/items" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
-		<div class="pageFormContent" layoutH="96">
+		<div class="pageFormContent" layoutH="116">
 			<p>
 				<label>name  :</label>
 				<input name="name" type="text" value="" size="30"  class="required"/>
@@ -59,13 +59,11 @@
 			</div>
 			
 		</div>
-		<div class="formBar">
-			<ul>
-				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
-				<li>
-					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
-				</li>
-			</ul>
+		<div class="formBar" style="height:52px;">
+			<div class="unit clearfix" style="text-align:right;">
+				<button type="submit" class="btn btn-info">save</button>
+				<button type="button" class="close btn btn-default"> cancel </button>
+			</div>
 		</div>
 	</form>
 </div>

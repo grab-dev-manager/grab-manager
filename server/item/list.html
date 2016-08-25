@@ -10,30 +10,19 @@
 
 <div class="pageHeader">
 	<form onsubmit="return navTabSearch(this);" action="./server/item/list.html" method="post">
-	<div class="searchBar">
-		<table class="searchContent">
-			<tr>
-				<td>
-					Search <input type="text" name="keyword" value="{{.keyword}}"/>
-				</td>
-				<td><button type="submit">submit</button></td>
-			</tr>
-		</table>
+	<div class="searchContent">
+		<a class="btn btn-info add-seller" rel="seller_add" href="./server/item/add.html" target="navTab" title="item add">add item</a>
+		<div class="grab-search">
+			<span>keywords：</span><input type="text" name="keyword" value="{{.keyword}}" />
+			<button type="submit" class="btn btn-info"> search </button>
+		</div>
 	</div>
 	</form>
 </div>
 <div class="pageContent">
-	<div class="panelBar">
-		<ul class="toolBar">
-			<li><a class="add" rel="item_add" href="./server/item/add.html" target="navTab" title="item add"><span>add</span></a></li>
-			<li><a class="delete" target="selectedTodo" rel="ids" href="/api/items/xxxx" title="delete"><span>delete</span></a></li>
-			<li class="line">line</li>
-		</ul>
-	</div>
-	<table class="table" width="100%" layoutH="111">
+	<table class="table" width="100%" layoutH="116">
 		<thead>
 			<tr>
-				<th width="20"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
 					<!--字段对应区域开始-->
 					<th>name</th>
 					<th>seller_id</th>
@@ -48,7 +37,6 @@
 			{{with .data}}
 			{{range .}}
 			<tr target="sid_user" rel="2">
-				<td><input name="ids" value="xxx" type="checkbox"></td>
 				<!--字段对应区域开始-->
 				<td>{{.name}}</td>
 				<td>{{.sellerid}}</td>
@@ -56,8 +44,7 @@
 				<td>{{.price}}</td>
 				<!--字段对应区域结束-->
 				<td>
-					<a title="item delete" target="ajaxTodo" href="/api/items/xxxx" class="btnDel">delete</a>
-					<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id={{.id}}" class="btnEdit">edit</a>
+					<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id={{.id}}" class="btn btn-warning">edit</a>
 				</td>
 			</tr>
 			{{end}}
