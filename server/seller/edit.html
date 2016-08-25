@@ -14,7 +14,7 @@
 				</p>
 				<p>
 					<label>business_type :</label>
-					<input name="business_type" type="text" size="30" value="{{.business_type}}"  class="required"/>
+					<input name="business_type" type="text" size="30" value="{{.business_type}}"/>
 				</p>
 				<div class="unit">
 					<p>
@@ -108,45 +108,31 @@
 							{{with .service_hours}}
 							<li  class="clearfix">
 								<label>Monday :</label>
-								{{with .mon}}
-								<input name="service_hours[mon][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[mon]" class="timeRange" value="{{.mon}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Tuesday :</label>
-								{{with .tue}}
-								<input name="service_hours[tue][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[tue]" class="timeRange" value="{{.tue}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Wednesday :</label>
-								{{with .wed}}
-								<input name="service_hours[wed][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[wed]" class="timeRange" value="{{.wed}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Thursday :</label>
-								{{with .thu}}
-								<input name="service_hours[thu][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[thu]" class="timeRange" value="{{.thu}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Friday :</label>
-								{{with .fri}}
-								<input name="service_hours[fri][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[fri]" class="timeRange" value="{{.fri}}" type="text" size="30" />
 							</li>
 							<li class="clearfix">
 								<label>Saturday :</label>
-								{{with .sat}}
-								<input name="service_hours[sat][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[sat]" class="timeRange" value="{{.sat}}" type="text" size="30" />
 							</li>
 							<li  class="clearfix">
 								<label>Sunday :</label>
-								{{with .sun}}
-								<input name="service_hours[sun][start]" class="timeRange" value={{.start}} type="text" size="30" />
-								{{end}}
+								<input name="service_hours[sun]" class="timeRange" value="{{.sun}}" type="text" size="30" />
 							</li>
 							{{end}}
 						</ul>
@@ -157,45 +143,31 @@
 								{{with .opening_hours}}
 								<li  class="clearfix">
 									<label>Monday :</label>
-									{{with .mon}}
-									<input name="opening_hours[mon][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[mon]" class="timeRange" value="{{.sun}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
 									<label>Tuesday :</label>
-									{{with .tue}}
-									<input name="opening_hours[tue][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[tue]" class="timeRange" value="{{.tue}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
 									<label>Wednesday :</label>
-									{{with .wed}}
-									<input name="opening_hours[wed][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[wed]" class="timeRange" value="{{.wed}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
 									<label>Thursday :</label>
-									{{with .thu}}
-									<input name="opening_hours[thu][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[thu]" class="timeRange" value="{{.thu}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
 									<label>Friday :</label>
-									{{with .fri}}
-									<input name="opening_hours[fri][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[fri]" class="timeRange" value="{{.fri}}" type="text" size="30" />
 								</li>
 								<li class="clearfix">
 									<label>Saturday :</label>
-									{{with .sat}}
-									<input name="opening_hours[sat][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[sat]" class="timeRange" value="{{.sat}}" type="text" size="30" />
 								</li>
 								<li  class="clearfix">
 									<label>Sunday :</label>
-									{{with .sun}}
-									<input name="opening_hours[sun][start]" class="timeRange" value={{.start}} type="text" size="30" />
-									{{end}}
+									<input name="opening_hours[sun]" class="timeRange" value="{{.sun}}" type="text" size="30" />
 								</li>
 								{{end}}
 							</ul>
