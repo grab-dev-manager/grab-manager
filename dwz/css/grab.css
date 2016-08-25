@@ -42,6 +42,10 @@ span.error{
 	width:100%;
 	background: #b8d0d6;
 }
+.catalog-box,
+.item-box{
+	padding: 20px 0;
+}
 .item-box h2,
 .catalog-box h2{
 	font-size:16px;

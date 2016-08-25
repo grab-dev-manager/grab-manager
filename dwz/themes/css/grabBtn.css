@@ -265,6 +265,10 @@ a.btn:active {
   float: right;
   margin-right: 20px;
 }
+.add-item {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 .grab-search input {
   font-size: 24px;
   width: 240px;
@@ -285,4 +289,19 @@ a.btn:active {
   padding:5px 0;
   line-height: 35px;
   height: 35px;
+}
+
+.grab-table .title{
+  background: #EBF0F5;
+  height: 52px;
+  line-height: 52px;
+  text-indent: 5px;
+  font-size: 18px;
+}
+.grab-table .title a{
+  float: right;
+  position: relative;
+  top:5px;
+  right: 10px;
+  /*#00B140*/
 }

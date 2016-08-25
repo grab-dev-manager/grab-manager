@@ -218,106 +218,89 @@
 						</div>
 					</div>
 				</div>
-				<div class="unit clearfix  grab-btn-box">
-					<div class="buttonActive mr10"><div class="buttonContent"><button type="submit">save</button></div></div>
-					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
+				<div class="unit clearfix" style="text-align:right;">
+					<button type="submit" class="btn btn-info">save</button>
+					<button type="button" class="close btn btn-default"> cancel </button>
 				</div>
-				<div class="thought-line"></div>
+
 			</div>
 			{{end}}
-			<div class="item-box">
-				<h2 class="contentTitle">item list</h2>
-				<div class="panelBar">
-					<ul class="toolBar">
-						<li><a class="add" rel="item_add" href="./server/item/add.html" target="navTab" title="item add"><span>add</span></a></li>
-						<li class="line">line</li>
-					</ul>
-				</div>
-				<table class="table" width="100%">
-					<thead>
-						<tr>
-								<!--字段对应区域开始-->
-								<th>name</th>
-								<th>seller_id</th>
-								<th>type</th>
-								<th>price</th>
-								<!--字段对应区域结束-->
-							<th>operate</th>
-						</tr>
-					</thead>
-					<tbody>
-					{{with .items}}
-					{{range .}}
-						<!-- data list  -->
-						<tr target="sid_user" rel="2">
-							<!--字段对应区域开始-->
-							<td>{{.name}}</td>
-							<td>{{.sellerid}}</td>
-							<td>{{.type}}</td>
-							<td>{{.price}}</td>
-							<!--字段对应区域结束-->
-							<td>
-								<a title="item delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id={{.id}}" class="btnDel">delete</a>
-								<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id={{.id}}" class="btnEdit">edit</a>
-							</td>
-						</tr>
-						<!-- data list -->
-				{{end}}
-				{{end}}
-					</tbody>
-				</table>
-			</div>
-			<div class="catalog-box">
-				<h2 class="contentTitle">catalog list</h2>
-				<div class="panelBar">
-					<ul class="toolBar">
-						<li><a class="add" rel="item_add" href="./server/catalog/add.html" target="navTab" title="catalog add"><span>add</span></a></li>
-						<li class="line">line</li>
-					</ul>
-				</div>
-				<table class="table" width="100%">
-					<thead>
-						<tr>
-							<!--字段对应区域开始-->
-							<th>catalog_name</th>
-							<th>catalog_status</th>
-							<th>seller_id</th>
-							<th>updated_time</th>
-							<!--字段对应区域结束-->
-							<th>operate</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- data list  -->
-						{{with .catalogs}}
+			<div class="thought-line"></div>
+			<div class="item-box grab-table">
+				<h2 class="title">item list<a class="btn btn-info" rel="item_add" href="./server/item/add.html" target="navTab" title="item add">add item</a></h2>
+				<div class="page-item-box" layoutH="200">
+					<table class="table" width="100%">
+						<thead>
+							<tr>
+									<!--字段对应区域开始-->
+									<th>name</th>
+									<th>seller_id</th>
+									<th>type</th>
+									<th>price</th>
+									<!--字段对应区域结束-->
+								<th>operate</th>
+							</tr>
+						</thead>
+						<tbody>
+						{{with .items}}
 						{{range .}}
-						<tr target="sid_user" rel="2">
-							<!--字段对应区域开始-->
-							<td>{{.catalog_name}}</td>
-							<td>{{.catalog_status}}</td>
-							<td>{{.seller_id}}</td>
-							<td>{{.updated_time}}</td>
-							<!--字段对应区域结束-->
-
-							<td>
-								<a title="catalog delete" target="ajaxTodo" href="./dwz/demo/common/ajaxDone.html?id={{.id}}" class="btnDel">delete</a>
-								<a title="catalog edit" rel="catalog_edit" target="navTab" href="./server/catalog/edit.html?id={{.id}}" class="btnEdit">edit</a>
-							</td>
-						</tr>
-						{{end}}
-						{{end}}
-						<!-- data list -->
-					</tbody>
-				</table>
+							<!-- data list  -->
+							<tr target="sid_user" rel="2">
+								<!--字段对应区域开始-->
+								<td>{{.name}}</td>
+								<td>{{.sellerid}}</td>
+								<td>{{.type}}</td>
+								<td>{{.price}}</td>
+								<!--字段对应区域结束-->
+								<td>
+									<a title="item edit" rel="item_edit" target="navTab" href="./server/item/edit.html?id={{.id}}" class="btn btn-warning">edit</a>
+								</td>
+							</tr>
+							<!-- data list -->
+					{{end}}
+					{{end}}
+						</tbody>
+					</table>
+				</div>
 			</div>
-		</div>
-		<div class="formBar" style="display:none;">
-			<ul>
-				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
-				<li>
-					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
-				</li>
-			</ul>
+			<div class="catalog-box grab-table">
+				<h2 class="title">catalog list<a class="btn btn-info" rel="item_add" href="./server/catalog/add.html" target="navTab" title="catalog add">add catalog</a></h2>
+				<div class="page-catalog-box" layoutH="400">
+					<table class="table" width="100%">
+						<thead>
+							<tr>
+								<!--字段对应区域开始-->
+								<th>catalog_name</th>
+								<th>catalog_status</th>
+								<th>seller_id</th>
+								<th>updated_time</th>
+								<!--字段对应区域结束-->
+								<th>operate</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- data list  -->
+							{{with .catalogs}}
+							{{range .}}
+							<tr target="sid_user" rel="2">
+								<!--字段对应区域开始-->
+								<td>{{.catalog_name}}</td>
+								<td>{{.catalog_status}}</td>
+								<td>{{.seller_id}}</td>
+								<td>{{.updated_time}}</td>
+								<!--字段对应区域结束-->
+
+								<td>
+									<a title="catalog edit" rel="catalog_edit" target="navTab" href="./server/catalog/edit.html?id={{.id}}" class="btn btn-warning">edit</a>
+								</td>
+							</tr>
+							{{end}}
+							{{end}}
+							<!-- data list -->
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</form>
 </div>
