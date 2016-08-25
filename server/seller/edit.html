@@ -185,11 +185,13 @@
 						<div class="img-picker img-one">select </div>
 						<div class="img-show wh100" data-input-name="icon_href">
 							<!-- 有图片就显示 -->
+							{{range .icon_href}}
 							<div class="pic-box">
 								<span class="close_img"></span>
-								<img src="{{.icon_href}}">
-								<input type="hidden" name="icon_href" value="{{.icon_href}}">
+								<img src="{{.}}">
+								<input type="hidden" name="icon_href" value="{{.}}">
 							</div>
+							{{end}}
 							<!-- 有图片就显示结束 -->
 						</div>
 					</div>
