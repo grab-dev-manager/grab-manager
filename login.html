@@ -75,7 +75,10 @@
 
 		function ajaxLogin(){
 			submitBtn.unbind();
-			if(!checkValid()) return false;
+			if(!checkValid()){
+				submitBtn.bind('click',ajaxLogin);
+				return false
+			};
 	        /*请求之地*/
 	        var __page_url = 'http://localhost/grab-manager/';
 	        $.ajax({
